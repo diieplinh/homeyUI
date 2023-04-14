@@ -7,6 +7,10 @@
     {
       "id": "Events",
       "isDefault": false
+    },
+    {
+      "id": "Page1",
+      "isDefault": false
     }
   ],
   "viewMode": false,
@@ -15,6 +19,9 @@
   "color": "#F1DEFF",
   "icon": "bird",
   "unpublishedAppLayout": {
+    "type": "FLUID"
+  },
+  "publishedAppLayout": {
     "type": "FLUID"
   },
   "unpublishedCustomJSLibs": [],
