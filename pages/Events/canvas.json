@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 580,
+          "bottomRow": 440,
           "containerStyle": "none",
           "snapRows": 64,
           "parentRowSpace": 1,
@@ -35,8 +35,8 @@
               "searchTags": [
                 "calendar"
               ],
-              "topRow": 10,
-              "bottomRow": 58,
+              "topRow": 0,
+              "bottomRow": 44,
               "shortcuts": false,
               "parentRowSpace": 10,
               "labelWidth": 5,
