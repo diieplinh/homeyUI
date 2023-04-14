@@ -7,6 +7,10 @@
     {
       "id": "Events",
       "isDefault": false
+    },
+    {
+      "id": "Page1",
+      "isDefault": false
     }
   ],
   "viewMode": false,
@@ -14,6 +18,9 @@
   "unreadCommentThreads": 0,
   "color": "#F1DEFF",
   "icon": "bird",
+  "unpublishedAppLayout": {
+    "type": "FLUID"
+  },
   "unpublishedCustomJSLibs": [],
   "publishedCustomJSLibs": [],
   "evaluationVersion": 2,
