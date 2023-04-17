@@ -13,11 +13,19 @@
       "isDefault": false
     },
     {
-      "id": "Page1",
+      "id": "tasks",
       "isDefault": false
     },
     {
-      "id": "Page2",
+      "id": "shopping list",
+      "isDefault": false
+    },
+    {
+      "id": "Shopping Category",
+      "isDefault": false
+    },
+    {
+      "id": "Tasks Category",
       "isDefault": false
     }
   ],
