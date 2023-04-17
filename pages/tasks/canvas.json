@@ -264,7 +264,7 @@
                         }
                       },
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-                      "columnUpdatedAt": 1681771342125,
+                      "columnUpdatedAt": 1681772772751,
                       "originalBottomRow": 70,
                       "defaultSelectedRowIndices": [
                         0
@@ -274,9 +274,9 @@
                       "columnOrder": [
                         "task",
                         "step",
+                        "Deadline",
                         "status",
-                        "action",
-                        "Deadline"
+                        "action"
                       ],
                       "dynamicPropertyPathList": [],
                       "displayName": "Table",
