@@ -35,7 +35,6 @@
               "searchTags": [
                 "group"
               ],
-
               "topRow": 15,
               "bottomRow": 51,
               "parentRowSpace": 10,
@@ -548,7 +547,6 @@
               "renderMode": "CANVAS",
               "isLoading": false,
               "responsiveBehavior": "fill",
-
               "originalTopRow": 15,
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
               "maxDynamicHeight": 9000,
