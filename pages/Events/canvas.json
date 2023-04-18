@@ -98,7 +98,7 @@
                       ],
                       "shouldTruncate": false,
                       "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
-                      "text": "Tasks",
+                      "text": "Events",
                       "key": "mm2c55ydia",
                       "isDeprecated": false,
                       "rightColumn": 25.5,
@@ -123,7 +123,7 @@
                       "resetFormOnClick": true,
                       "boxShadow": "none",
                       "widgetName": "Button2",
-                      "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+                      "buttonColor": "#ec4899",
                       "displayName": "Button",
                       "iconSVG": "/static/media/icon.cca026338f1c8eb6df8ba03d084c2fca.svg",
                       "searchTags": [
@@ -139,13 +139,10 @@
                       "leftColumn": 49,
                       "dynamicBindingPathList": [
                         {
-                          "key": "buttonColor"
-                        },
-                        {
                           "key": "borderRadius"
                         }
                       ],
-                      "text": "Create New Task",
+                      "text": "Create New Event",
                       "isDisabled": false,
                       "key": "k11vbsjhcq",
                       "isDeprecated": false,
@@ -282,10 +279,10 @@
                       "displayName": "Table",
                       "bottomRow": 28,
                       "columnWidthMap": {
-                        "task": 222,
-                        "step": 127,
+                        "task": 210,
+                        "step": 120,
                         "status": 415,
-                        "Deadline": 163
+                        "Deadline": 205
                       },
                       "parentRowSpace": 10,
                       "hideCard": false,
@@ -334,7 +331,7 @@
                           "isCellVisible": true,
                           "isCellEditable": false,
                           "isDerived": false,
-                          "label": "Task",
+                          "label": "Event",
                           "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"task\"]))}}",
                           "validation": {},
                           "sticky": "",
@@ -417,7 +414,7 @@
                           "isEditable": false,
                           "isCellVisible": true,
                           "isDerived": false,
-                          "label": "Deadline",
+                          "label": "Date/Time",
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
                           "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Deadline\"]))}}",
@@ -433,7 +430,7 @@
                       "textSize": "0.875rem",
                       "widgetId": "kl031tmdyq",
                       "minWidth": 450,
-                      "tableData": "[\n  {\n    \"step\": \"Cleaning\",\n    \"task\": \"Mop Floors\",\n    \"status\": \"Please use the mop with the red handle.\",\n    \"action\": \"\", \n\t\t\"Deadline\": \"Monday, Oct.4th\"\n  },\n  {\n    \"step\": \"Weekly Chores\",\n    \"task\": \"Take out Trash\",\n    \"status\": \"\",\n    \"action\": \"\", \n\t\t\"Deadline\": \"Friday, 9am\"\n  }, \n\t{\n\t\"step\": \"Weekly Chores\",\n    \"task\": \"Finish sewing\",\n    \"status\": \"make sure you are using the newer needles\",\n    \"action\": \"\", \n\t\t\"Deadline\": \"Sunday, 4pm\"\n\t\n\t\n\t}\n]",
+                      "tableData": "[\n  {\n    \"step\": \"Meetings\",\n    \"task\": \"Fundies 2 Office Hour\",\n    \"status\": \"Finalizing the semester; questions on Maze assignment\",\n    \"action\": \"\", \n\t\t\"Deadline\": \"Monday Apr 17, 1:00pm\"\n  },\n  {\n    \"step\": \"Miscellaneous\",\n    \"task\": \"Sephora Spring Sale 20% Off\",\n    \"status\": \"Don't overspend girl!!!\",\n    \"action\": \"\", \n\t\t\"Deadline\": \"Friday Apr 21, 9:30am\"\n  }, \n\t{\n\t\"step\": \"Classes\",\n    \"task\": \"Algorithms and Data\",\n    \"status\": \"Exam review on Dynamic Programming\",\n    \"action\": \"\", \n\t\t\"Deadline\": \"Sunday May 21, 7:34pm\"\n\t\n\t\n\t}\n]",
                       "label": "Data",
                       "searchKey": "",
                       "parentId": "tlsmvmp680",
@@ -607,7 +604,7 @@
                       "minWidth": 450,
                       "isVisible": true,
                       "datePickerType": "DATE_PICKER",
-                      "label": "Deadline",
+                      "label": "Date/Time",
                       "version": 2,
                       "parentId": "tlsmvmp680",
                       "labelAlignment": "left",
