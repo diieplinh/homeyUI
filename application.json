@@ -11,6 +11,22 @@
     {
       "id": "Message",
       "isDefault": false
+    },
+    {
+      "id": "tasks",
+      "isDefault": false
+    },
+    {
+      "id": "shopping list",
+      "isDefault": false
+    },
+    {
+      "id": "Shopping Category",
+      "isDefault": false
+    },
+    {
+      "id": "Tasks Category",
+      "isDefault": false
     }
   ],
   "viewMode": false,

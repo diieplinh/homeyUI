@@ -187,10 +187,13 @@
                         },
                         {
                           "key": "borderRadius"
+                        },
+                        {
+                          "key": "options"
                         }
                       ],
                       "labelPosition": "Top",
-                      "options": "[\n  {\n    \"label\": \"Codey Bugger\",\n    \"value\": \"Codey\"\n  },\n  {\n    \"label\": \"Emma Thompson\",\n    \"value\": \"Emma\"\n  },\n  {\n    \"label\": \"Amanda Bailey\",\n    \"value\": \"Amanda\"\n  }\n]",
+                      "options": "{{list_of_users.data.map( p => ({label: p.first_name + \" \" + p.last_name, value: p.user_id}))}}",
                       "placeholderText": "Select option",
                       "isDisabled": false,
                       "key": "zqegxd7wba",
@@ -429,7 +432,18 @@
             }
           ]
         },
-        "layoutOnLoadActions": [],
+        "layoutOnLoadActions": [
+          [
+            {
+              "id": "Login_list_of_users",
+              "name": "list_of_users",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            }
+          ]
+        ],
         "layoutOnLoadActionErrors": [],
         "validOnPageLoadActions": true,
         "id": "Login",
