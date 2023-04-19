@@ -251,7 +251,7 @@
                       "defaultSelectedRowIndices": [
                         0
                       ],
-                      "widgetName": "Table1",
+                      "widgetName": "table_of_tasks",
                       "defaultPageSize": 0,
                       "columnOrder": [
                         "details",
@@ -300,7 +300,7 @@
                           "label": "details",
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
-                          "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"details\"]))}}",
+                          "computedValue": "{{table_of_tasks.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"details\"]))}}",
                           "sticky": "",
                           "validation": {},
                           "cellBackground": "#F8FAFC"
@@ -329,7 +329,7 @@
                           "label": "user",
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
-                          "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"user\"]))}}",
+                          "computedValue": "{{table_of_tasks.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"user\"]))}}",
                           "sticky": "",
                           "validation": {},
                           "cellBackground": "#F8FAFC"
@@ -358,7 +358,7 @@
                           "label": "deadline",
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
-                          "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"deadline\"]))}}",
+                          "computedValue": "{{table_of_tasks.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"deadline\"]))}}",
                           "sticky": "",
                           "validation": {},
                           "cellBackground": "#F8FAFC"
@@ -387,7 +387,7 @@
                           "label": "name: ",
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
-                          "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"name\"]))}}",
+                          "computedValue": "{{table_of_tasks.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"name\"]))}}",
                           "sticky": "",
                           "validation": {},
                           "cellBackground": "#F8FAFC"
@@ -416,7 +416,7 @@
                           "label": "status",
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
-                          "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"status\"]))}}",
+                          "computedValue": "{{table_of_tasks.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"status\"]))}}",
                           "sticky": "",
                           "validation": {},
                           "cellBackground": "#F8FAFC"
