@@ -2,12 +2,12 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "list_of_users",
+    "name": "lists_of_tasks",
     "datasource": {
       "name": "DEFAULT_REST_DATASOURCE",
       "pluginId": "restapi-plugin",
       "datasourceConfiguration": {
-        "url": "web:4000/users"
+        "url": "web:4000/tasks"
       },
       "invalids": [],
       "messages": [],
@@ -16,7 +16,7 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Login",
+    "pageId": "tasks",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
@@ -47,7 +47,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "Login_list_of_users",
+  "id": "tasks_lists_of_tasks",
   "deleted": false,
-  "gitSyncId": "6438aed28580c21de225f694_643dc29415499f5c28c1ae06"
+  "gitSyncId": "6438ac1ba340c1324f694f34_643f3582f45b224b3ae3402c"
 }

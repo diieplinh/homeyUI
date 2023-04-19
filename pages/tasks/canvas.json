@@ -179,27 +179,6 @@
                       "animateLoading": true,
                       "dynamicBindingPathList": [
                         {
-                          "key": "primaryColumns.step.computedValue"
-                        },
-                        {
-                          "key": "primaryColumns.task.computedValue"
-                        },
-                        {
-                          "key": "primaryColumns.status.computedValue"
-                        },
-                        {
-                          "key": "primaryColumns.action.computedValue"
-                        },
-                        {
-                          "key": "primaryColumns.action.buttonColor"
-                        },
-                        {
-                          "key": "primaryColumns.action.borderRadius"
-                        },
-                        {
-                          "key": "primaryColumns.action.boxShadow"
-                        },
-                        {
                           "key": "accentColor"
                         },
                         {
@@ -212,22 +191,25 @@
                           "key": "cellBackground"
                         },
                         {
-                          "key": "primaryColumns.step.cellBackground"
+                          "key": "primaryColumns.details.computedValue"
                         },
                         {
-                          "key": "primaryColumns.task.cellBackground"
+                          "key": "primaryColumns.user.computedValue"
                         },
                         {
-                          "key": "primaryColumns.status.cellBackground"
+                          "key": "primaryColumns.deadline.computedValue"
                         },
                         {
-                          "key": "primaryColumns.action.cellBackground"
+                          "key": "primaryColumns.name.computedValue"
                         },
                         {
-                          "key": "primaryColumns.Deadline.computedValue"
+                          "key": "primaryColumns.customColumn1.cellBackground"
                         },
                         {
-                          "key": "primaryColumns.Assignee.computedValue"
+                          "key": "tableData"
+                        },
+                        {
+                          "key": "primaryColumns.status.computedValue"
                         }
                       ],
                       "needsHeightForContent": true,
@@ -267,7 +249,7 @@
                         }
                       },
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-                      "columnUpdatedAt": 1681777527686,
+                      "columnUpdatedAt": 1681868800453,
                       "originalBottomRow": 70,
                       "defaultSelectedRowIndices": [
                         0
@@ -275,12 +257,12 @@
                       "widgetName": "Table1",
                       "defaultPageSize": 0,
                       "columnOrder": [
-                        "Assignee",
-                        "Deadline",
-                        "task",
-                        "step",
-                        "status",
-                        "action"
+                        "details",
+                        "user",
+                        "deadline",
+                        "name",
+                        "customColumn1",
+                        "status"
                       ],
                       "dynamicPropertyPathList": [],
                       "displayName": "Table",
@@ -296,145 +278,13 @@
                       "dynamicTriggerPathList": [],
                       "borderWidth": "1",
                       "primaryColumns": {
-                        "step": {
-                          "index": 0,
-                          "width": 150,
-                          "id": "step",
-                          "originalId": "step",
-                          "alias": "step",
-                          "horizontalAlignment": "CENTER",
-                          "verticalAlignment": "CENTER",
-                          "columnType": "text",
-                          "textSize": "0.875rem",
-                          "enableFilter": true,
-                          "enableSort": true,
-                          "isVisible": true,
-                          "isCellVisible": true,
-                          "isCellEditable": false,
-                          "isDerived": false,
-                          "label": "Category",
-                          "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"step\"]))}}",
-                          "validation": {},
-                          "sticky": "",
-                          "labelColor": "#FFFFFF",
-                          "isEditable": false,
-                          "cellBackground": "{{appsmith.theme.colors.backgroundColor}}",
-                          "textColor": "#18181b"
-                        },
-                        "task": {
-                          "index": 1,
-                          "width": 150,
-                          "id": "task",
-                          "originalId": "task",
-                          "alias": "task",
-                          "horizontalAlignment": "CENTER",
-                          "verticalAlignment": "CENTER",
-                          "columnType": "text",
-                          "textSize": "0.875rem",
-                          "enableFilter": true,
-                          "enableSort": true,
-                          "isVisible": true,
-                          "isCellVisible": true,
-                          "isCellEditable": false,
-                          "isDerived": false,
-                          "label": "Task",
-                          "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"task\"]))}}",
-                          "validation": {},
-                          "sticky": "",
-                          "labelColor": "#FFFFFF",
-                          "isEditable": false,
-                          "cellBackground": "{{appsmith.theme.colors.backgroundColor}}",
-                          "textColor": "#18181b"
-                        },
-                        "status": {
+                        "details": {
+                          "allowCellWrapping": false,
                           "index": 2,
                           "width": 150,
-                          "id": "status",
-                          "originalId": "status",
-                          "alias": "status",
-                          "horizontalAlignment": "CENTER",
-                          "verticalAlignment": "CENTER",
-                          "columnType": "text",
-                          "textSize": "0.875rem",
-                          "enableFilter": true,
-                          "enableSort": true,
-                          "isVisible": true,
-                          "isCellVisible": true,
-                          "isCellEditable": false,
-                          "isDerived": false,
-                          "label": "Details",
-                          "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"status\"]))}}",
-                          "validation": {},
-                          "sticky": "",
-                          "labelColor": "#FFFFFF",
-                          "isEditable": false,
-                          "cellBackground": "{{appsmith.theme.colors.backgroundColor}}",
-                          "textColor": "#18181b"
-                        },
-                        "action": {
-                          "index": 3,
-                          "width": 150,
-                          "id": "action",
-                          "originalId": "action",
-                          "alias": "action",
-                          "horizontalAlignment": "CENTER",
-                          "verticalAlignment": "CENTER",
-                          "columnType": "button",
-                          "textSize": "0.875rem",
-                          "enableFilter": true,
-                          "enableSort": true,
-                          "isVisible": true,
-                          "isCellVisible": true,
-                          "isCellEditable": false,
-                          "isDisabled": false,
-                          "isDerived": false,
-                          "label": "Complete",
-                          "onClick": "{{currentRow.step === '#1' ? showAlert('Done', 'success') : currentRow.step === '#2' ? navigateTo('https://docs.appsmith.com/core-concepts/connecting-to-data-sources/querying-a-database',undefined,'NEW_WINDOW') : navigateTo('https://docs.appsmith.com/core-concepts/displaying-data-read/display-data-tables',undefined,'NEW_WINDOW')}}",
-                          "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"action\"]))}}",
-                          "validation": {},
-                          "sticky": "",
-                          "labelColor": "#FFFFFF",
-                          "buttonColor": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( appsmith.theme.colors.primaryColor))}}",
-                          "borderRadius": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( appsmith.theme.borderRadius.appBorderRadius))}}",
-                          "boxShadow": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( 'none'))}}",
-                          "cellBackground": "{{appsmith.theme.colors.backgroundColor}}",
-                          "textColor": "#18181b"
-                        },
-                        "Deadline": {
-                          "allowCellWrapping": false,
-                          "index": 4,
-                          "width": 150,
-                          "originalId": "Deadline",
-                          "id": "Deadline",
-                          "alias": "Deadline",
-                          "horizontalAlignment": "CENTER",
-                          "verticalAlignment": "CENTER",
-                          "columnType": "text",
-                          "textColor": "#18181b",
-                          "textSize": "0.875rem",
-                          "enableFilter": true,
-                          "enableSort": true,
-                          "isVisible": true,
-                          "isDisabled": false,
-                          "isCellEditable": false,
-                          "isEditable": false,
-                          "isCellVisible": true,
-                          "isDerived": false,
-                          "label": "Deadline",
-                          "isSaveVisible": true,
-                          "isDiscardVisible": true,
-                          "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Deadline\"]))}}",
-                          "sticky": "",
-                          "validation": {},
-                          "cellBackground": "#F8FAFC"
-                        },
-                        "Assignee": {
-                          "allowCellWrapping": false,
-                          "index": 5,
-                          "width": 150,
-                          "originalId": "Assignee",
-                          "id": "Assignee",
-                          "alias": "Assignee",
+                          "originalId": "details",
+                          "id": "details",
+                          "alias": "details",
                           "horizontalAlignment": "CENTER",
                           "verticalAlignment": "CENTER",
                           "columnType": "text",
@@ -449,10 +299,156 @@
                           "isEditable": false,
                           "isCellVisible": true,
                           "isDerived": false,
-                          "label": "Assignee",
+                          "label": "details",
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
-                          "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"Assignee\"]))}}",
+                          "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"details\"]))}}",
+                          "sticky": "",
+                          "validation": {},
+                          "cellBackground": "#F8FAFC"
+                        },
+                        "user": {
+                          "allowCellWrapping": false,
+                          "index": 0,
+                          "width": 150,
+                          "originalId": "user",
+                          "id": "user",
+                          "alias": "user",
+                          "horizontalAlignment": "CENTER",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "number",
+                          "textColor": "#18181b",
+                          "textSize": "0.875rem",
+                          "fontStyle": "",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellEditable": false,
+                          "isEditable": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "user",
+                          "isSaveVisible": true,
+                          "isDiscardVisible": true,
+                          "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"user\"]))}}",
+                          "sticky": "",
+                          "validation": {},
+                          "cellBackground": "#F8FAFC"
+                        },
+                        "deadline": {
+                          "allowCellWrapping": false,
+                          "index": 3,
+                          "width": 150,
+                          "originalId": "deadline",
+                          "id": "deadline",
+                          "alias": "deadline",
+                          "horizontalAlignment": "CENTER",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textColor": "#18181b",
+                          "textSize": "0.875rem",
+                          "fontStyle": "",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellEditable": false,
+                          "isEditable": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "deadline",
+                          "isSaveVisible": true,
+                          "isDiscardVisible": true,
+                          "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"deadline\"]))}}",
+                          "sticky": "",
+                          "validation": {},
+                          "cellBackground": "#F8FAFC"
+                        },
+                        "name": {
+                          "allowCellWrapping": false,
+                          "index": 4,
+                          "width": 150,
+                          "originalId": "name",
+                          "id": "name",
+                          "alias": "name",
+                          "horizontalAlignment": "CENTER",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textColor": "#18181b",
+                          "textSize": "0.875rem",
+                          "fontStyle": "",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellEditable": false,
+                          "isEditable": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "name: ",
+                          "isSaveVisible": true,
+                          "isDiscardVisible": true,
+                          "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"name\"]))}}",
+                          "sticky": "",
+                          "validation": {},
+                          "cellBackground": "#F8FAFC"
+                        },
+                        "customColumn1": {
+                          "allowCellWrapping": false,
+                          "index": 5,
+                          "width": 150,
+                          "originalId": "customColumn1",
+                          "id": "customColumn1",
+                          "alias": "customColumn1",
+                          "horizontalAlignment": "CENTER",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textColor": "#18181b",
+                          "textSize": "0.875rem",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellEditable": false,
+                          "isEditable": false,
+                          "isCellVisible": true,
+                          "isDerived": true,
+                          "label": "customColumn1",
+                          "isSaveVisible": true,
+                          "isDiscardVisible": true,
+                          "computedValue": "",
+                          "sticky": "",
+                          "validation": {},
+                          "buttonStyle": "rgb(3, 179, 101)",
+                          "cellBackground": "{{appsmith.theme.colors.backgroundColor}}",
+                          "labelColor": "#FFFFFF"
+                        },
+                        "status": {
+                          "allowCellWrapping": false,
+                          "index": 2,
+                          "width": 150,
+                          "originalId": "status",
+                          "id": "status",
+                          "alias": "status",
+                          "horizontalAlignment": "CENTER",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textColor": "#18181b",
+                          "textSize": "0.875rem",
+                          "fontStyle": "",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellEditable": false,
+                          "isEditable": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "status",
+                          "isSaveVisible": true,
+                          "isDiscardVisible": true,
+                          "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"status\"]))}}",
                           "sticky": "",
                           "validation": {},
                           "cellBackground": "#F8FAFC"
@@ -465,7 +461,7 @@
                       "textSize": "0.875rem",
                       "widgetId": "kl031tmdyq",
                       "minWidth": 450,
-                      "tableData": "[\n  {\n    \"step\": \"Cleaning\",\n    \"task\": \"Mop Floors\",\n    \"status\": \"Please use the mop with the red handle.\",\n    \"action\": \"\", \n\t\t\"Deadline\": \"Monday, Oct.4th\", \n\t\t\"Assignee\": \"Jason\"\n  },\n  {\n    \"step\": \"Weekly Chores\",\n    \"task\": \"Take out Trash\",\n    \"status\": \"\",\n    \"action\": \"\", \n\t\t\"Deadline\": \"Friday, Aug. 25th\", \n\t\t\"Assignee\": \"Sydney\"\n  }, \n\t{\n\t\"step\": \"Weekly Chores\",\n    \"task\": \"Finish sewing\",\n    \"status\": \"make sure you are using the newer needles\",\n    \"action\": \"\", \n\t\t\"Deadline\": \"Sunday, Nov. 9th\", \n\t\t\"Assignee\": \"Nour\"\n\t\n\t\n\t}\n]",
+                      "tableData": "{{lists_of_tasks.data.map(p => ({\n         \n\t\tuser: p.assigned_to,\n\t\tdetails: p.details,\n\t\tstatus: (p.task_status === 1 ? 'completed':'incomplete'),\n\t\tdeadline: p.complete_by, \n\t\tname: p.title\n\t}))}}",
                       "label": "Data",
                       "searchKey": "",
                       "parentId": "tlsmvmp680",
@@ -801,7 +797,18 @@
             }
           ]
         },
-        "layoutOnLoadActions": [],
+        "layoutOnLoadActions": [
+          [
+            {
+              "id": "tasks_lists_of_tasks",
+              "name": "lists_of_tasks",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            }
+          ]
+        ],
         "layoutOnLoadActionErrors": [],
         "validOnPageLoadActions": true,
         "id": "tasks",
