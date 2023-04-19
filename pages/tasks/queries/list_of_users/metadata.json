@@ -2,12 +2,12 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "Api2",
+    "name": "list_of_users",
     "datasource": {
       "name": "DEFAULT_REST_DATASOURCE",
       "pluginId": "restapi-plugin",
       "datasourceConfiguration": {
-        "url": "web:4000/tasks_categories"
+        "url": "web:4000/users"
       },
       "invalids": [],
       "messages": [],
@@ -36,8 +36,12 @@
         "apiContentType": "none"
       }
     },
-    "executeOnLoad": false,
-    "dynamicBindingPathList": [],
+    "executeOnLoad": true,
+    "dynamicBindingPathList": [
+      {
+        "key": "datasourceUrl"
+      }
+    ],
     "isValid": true,
     "invalids": [],
     "messages": [],
@@ -47,7 +51,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "tasks_Api2",
+  "id": "tasks_list_of_users",
   "deleted": false,
-  "gitSyncId": "6438ac1ba340c1324f694f34_643f493cf45b224b3ae3403c"
+  "gitSyncId": "6438ac1ba340c1324f694f34_643f3736f45b224b3ae3402f"
 }
