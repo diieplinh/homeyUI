@@ -72,6 +72,7 @@
                       "resetFormOnClick": true,
                       "boxShadow": "none",
                       "widgetName": "Button1",
+                      "onClick": "{{create_user.run(() => showAlert('Success!'), () => showAlert('Error!'))}}",
                       "buttonColor": "#fca5a5",
                       "dynamicPropertyPathList": [],
                       "displayName": "Button",
@@ -85,7 +86,11 @@
                       "type": "BUTTON_WIDGET",
                       "hideCard": false,
                       "animateLoading": true,
-                      "dynamicTriggerPathList": [],
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onClick"
+                        }
+                      ],
                       "leftColumn": 41,
                       "dynamicBindingPathList": [
                         {
@@ -118,6 +123,7 @@
                       "resetFormOnClick": true,
                       "boxShadow": "none",
                       "widgetName": "Button2",
+                      "onClick": "{{delete_user.run()}}",
                       "buttonColor": "#be185d",
                       "displayName": "Button",
                       "iconSVG": "/static/media/icon.cca026338f1c8eb6df8ba03d084c2fca.svg",
@@ -130,7 +136,11 @@
                       "type": "BUTTON_WIDGET",
                       "hideCard": false,
                       "animateLoading": true,
-                      "dynamicTriggerPathList": [],
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onClick"
+                        }
+                      ],
                       "leftColumn": 2,
                       "dynamicBindingPathList": [
                         {
@@ -161,7 +171,7 @@
                     },
                     {
                       "boxShadow": "none",
-                      "widgetName": "Select1",
+                      "widgetName": "userdropdown",
                       "isFilterable": true,
                       "displayName": "Select",
                       "iconSVG": "/static/media/icon.bd99caba5853ad71e4b3d8daffacb3a2.svg",
@@ -179,7 +189,11 @@
                       "defaultOptionValue": "",
                       "animateLoading": true,
                       "parentColumnSpace": 6.361328125,
-                      "dynamicTriggerPathList": [],
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onOptionChange"
+                        }
+                      ],
                       "leftColumn": 2,
                       "dynamicBindingPathList": [
                         {
@@ -214,11 +228,12 @@
                       "responsiveBehavior": "fill",
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                       "maxDynamicHeight": 9000,
+                      "onOptionChange": "{{dropdownselection.run(() => {}, () => {})}}",
                       "minDynamicHeight": 4
                     },
                     {
                       "boxShadow": "none",
-                      "widgetName": "Input1",
+                      "widgetName": "first_field",
                       "displayName": "Input",
                       "iconSVG": "/static/media/icon.9f505595da61a34f563dba82adeb06ec.svg",
                       "searchTags": [
@@ -277,7 +292,7 @@
                     },
                     {
                       "boxShadow": "none",
-                      "widgetName": "Input1Copy1",
+                      "widgetName": "id_field",
                       "displayName": "Input",
                       "iconSVG": "/static/media/icon.9f505595da61a34f563dba82adeb06ec.svg",
                       "searchTags": [
@@ -296,7 +311,7 @@
                       "animateLoading": true,
                       "parentColumnSpace": 6.361328125,
                       "dynamicTriggerPathList": [],
-                      "resetOnSubmit": true,
+                      "resetOnSubmit": false,
                       "leftColumn": 2,
                       "dynamicBindingPathList": [
                         {
@@ -304,6 +319,9 @@
                         },
                         {
                           "key": "borderRadius"
+                        },
+                        {
+                          "key": "defaultText"
                         }
                       ],
                       "labelPosition": "Top",
@@ -331,14 +349,15 @@
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                       "maxDynamicHeight": 9000,
                       "iconAlign": "left",
-                      "defaultText": "",
+                      "defaultText": "{{dropdownselection.data[0].user_id}}",
                       "minDynamicHeight": 4
                     },
                     {
                       "boxShadow": "none",
-                      "widgetName": "Input1Copy",
+                      "widgetName": "last_field",
                       "displayName": "Input",
                       "iconSVG": "/static/media/icon.9f505595da61a34f563dba82adeb06ec.svg",
+                      "onSubmit": "{{clearStore()}}",
                       "searchTags": [
                         "form",
                         "text input",
@@ -354,7 +373,11 @@
                       "hideCard": false,
                       "animateLoading": true,
                       "parentColumnSpace": 6.361328125,
-                      "dynamicTriggerPathList": [],
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onSubmit"
+                        }
+                      ],
                       "resetOnSubmit": true,
                       "leftColumn": 34,
                       "dynamicBindingPathList": [
@@ -363,6 +386,9 @@
                         },
                         {
                           "key": "borderRadius"
+                        },
+                        {
+                          "key": "defaultText"
                         }
                       ],
                       "labelPosition": "Top",
@@ -390,7 +416,7 @@
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                       "maxDynamicHeight": 9000,
                       "iconAlign": "left",
-                      "defaultText": "",
+                      "defaultText": "{{dropdownselection.data[0].last_name}}",
                       "minDynamicHeight": 4
                     }
                   ],
@@ -440,6 +466,18 @@
               "confirmBeforeExecute": false,
               "pluginType": "API",
               "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "Login_dropdownselection",
+              "name": "dropdownselection",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "userdropdown.selectedOptionValue"
+              ],
               "timeoutInMillisecond": 10000
             }
           ]

@@ -2,12 +2,12 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "lists_of_tasks",
+    "name": "dropdownselection",
     "datasource": {
       "name": "DEFAULT_REST_DATASOURCE",
       "pluginId": "restapi-plugin",
       "datasourceConfiguration": {
-        "url": "web:4000/tasks"
+        "url": "web:4000/users/{{userdropdown.selectedOptionValue}}"
       },
       "invalids": [],
       "messages": [],
@@ -16,7 +16,7 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "tasks",
+    "pageId": "Login",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
@@ -37,17 +37,23 @@
       }
     },
     "executeOnLoad": true,
-    "dynamicBindingPathList": [],
+    "dynamicBindingPathList": [
+      {
+        "key": "datasourceUrl"
+      }
+    ],
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [],
+    "jsonPathKeys": [
+      "userdropdown.selectedOptionValue"
+    ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "tasks_lists_of_tasks",
+  "id": "Login_dropdownselection",
   "deleted": false,
-  "gitSyncId": "6438ac1ba340c1324f694f34_643f3582f45b224b3ae3402c"
+  "gitSyncId": "643ef2c7d3663f1f721a8342_6440b14a54729c7595e69317"
 }

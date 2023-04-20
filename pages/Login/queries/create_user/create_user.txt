@@ -1,0 +1,4 @@
+{
+	"first_name": {{first_field.text}},
+	"last_name": {{last_field.text}}
+};

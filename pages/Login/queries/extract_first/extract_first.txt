@@ -1,0 +1,1 @@
+SELECT first_name FROM public."Users" WHERE user_id = "{{userdropdown.selectedOptionValue}}";

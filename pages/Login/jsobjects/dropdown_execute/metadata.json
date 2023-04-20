@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "dropdown_execute",
+    "pageId": "Login",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "Login_dropdown_execute",
+  "deleted": false,
+  "gitSyncId": "643ef2c7d3663f1f721a8342_6440be0454729c7595e69337"
+}

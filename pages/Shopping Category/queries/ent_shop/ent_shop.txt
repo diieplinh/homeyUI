@@ -1,0 +1,4 @@
+{
+	category_name: {{shop_name.text}}
+
+}
