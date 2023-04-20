@@ -9,19 +9,19 @@
       "isDefault": false
     },
     {
-      "id": "tasks",
-      "isDefault": false
-    },
-    {
-      "id": "shopping list",
-      "isDefault": false
-    },
-    {
-      "id": "Shopping Category",
+      "id": "Tasks",
       "isDefault": false
     },
     {
       "id": "Tasks Category",
+      "isDefault": false
+    },
+    {
+      "id": "Shopping List",
+      "isDefault": false
+    },
+    {
+      "id": "Shopping Category",
       "isDefault": false
     },
     {

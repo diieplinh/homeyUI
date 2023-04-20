@@ -1,8 +1,0 @@
-{
-	"item_name": {{name_details.text}},
-	"quantity": {{quantity_details.text}},
-	"category_id": {{category_details.selectedOptionValue}},
-	"assigned_to": {{assignee_details.selectedOptionValue}},
-	"details": {{detail_details.text}},
-	
-};
