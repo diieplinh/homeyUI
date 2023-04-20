@@ -460,7 +460,7 @@
                       "isDisabled": false,
                       "key": "7j4y4kwvh8",
                       "isDeprecated": false,
-                      "rightColumn": 40,
+                      "rightColumn": 41,
                       "isDefaultClickDisabled": true,
                       "widgetId": "2l3m3c24qn",
                       "minWidth": 120,
@@ -510,7 +510,7 @@
               "originalTopRow": 11,
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
               "maxDynamicHeight": 9000,
-              "originalBottomRow": 54,
+              "originalBottomRow": 53,
               "minDynamicHeight": 10
             }
           ]
