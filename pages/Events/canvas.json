@@ -249,7 +249,7 @@
                         }
                       },
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-                      "columnUpdatedAt": 1681976255480,
+                      "columnUpdatedAt": 1682019009485,
                       "originalBottomRow": 70,
                       "defaultSelectedRowIndices": [
                         0
@@ -257,8 +257,8 @@
                       "widgetName": "table_of_events",
                       "defaultPageSize": 0,
                       "columnOrder": [
-                        "details",
                         "name",
+                        "details",
                         "date",
                         "creator",
                         "id"
@@ -299,7 +299,7 @@
                           "isEditable": false,
                           "isCellVisible": true,
                           "isDerived": false,
-                          "label": "details",
+                          "label": "Details",
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
                           "computedValue": "{{table_of_events.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"details\"]))}}",
@@ -327,7 +327,7 @@
                           "isEditable": false,
                           "isCellVisible": true,
                           "isDerived": false,
-                          "label": "name",
+                          "label": "Event Name",
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
                           "computedValue": "{{table_of_events.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"name\"]))}}",
@@ -355,7 +355,7 @@
                           "isEditable": false,
                           "isCellVisible": true,
                           "isDerived": false,
-                          "label": "date",
+                          "label": "Scheduled For",
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
                           "computedValue": "{{table_of_events.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"date\"]))}}",
