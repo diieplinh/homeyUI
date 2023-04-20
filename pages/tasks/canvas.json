@@ -194,9 +194,6 @@
                           "key": "primaryColumns.details.computedValue"
                         },
                         {
-                          "key": "primaryColumns.user.computedValue"
-                        },
-                        {
                           "key": "primaryColumns.deadline.computedValue"
                         },
                         {
@@ -207,6 +204,9 @@
                         },
                         {
                           "key": "primaryColumns.status.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.user.computedValue"
                         }
                       ],
                       "needsHeightForContent": true,
@@ -246,7 +246,7 @@
                         }
                       },
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-                      "columnUpdatedAt": 1681869345244,
+                      "columnUpdatedAt": 1681946158970,
                       "originalBottomRow": 70,
                       "defaultSelectedRowIndices": [
                         0
@@ -255,10 +255,10 @@
                       "defaultPageSize": 0,
                       "columnOrder": [
                         "details",
-                        "user",
                         "deadline",
                         "name",
-                        "status"
+                        "status",
+                        "user"
                       ],
                       "dynamicPropertyPathList": [],
                       "displayName": "Table",
@@ -301,35 +301,6 @@
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
                           "computedValue": "{{table_of_tasks.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"details\"]))}}",
-                          "sticky": "",
-                          "validation": {},
-                          "cellBackground": "#F8FAFC"
-                        },
-                        "user": {
-                          "allowCellWrapping": false,
-                          "index": 0,
-                          "width": 150,
-                          "originalId": "user",
-                          "id": "user",
-                          "alias": "user",
-                          "horizontalAlignment": "CENTER",
-                          "verticalAlignment": "CENTER",
-                          "columnType": "number",
-                          "textColor": "#18181b",
-                          "textSize": "0.875rem",
-                          "fontStyle": "",
-                          "enableFilter": true,
-                          "enableSort": true,
-                          "isVisible": true,
-                          "isDisabled": false,
-                          "isCellEditable": false,
-                          "isEditable": false,
-                          "isCellVisible": true,
-                          "isDerived": false,
-                          "label": "user",
-                          "isSaveVisible": true,
-                          "isDiscardVisible": true,
-                          "computedValue": "{{table_of_tasks.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"user\"]))}}",
                           "sticky": "",
                           "validation": {},
                           "cellBackground": "#F8FAFC"
@@ -420,6 +391,35 @@
                           "sticky": "",
                           "validation": {},
                           "cellBackground": "#F8FAFC"
+                        },
+                        "user": {
+                          "allowCellWrapping": false,
+                          "index": 0,
+                          "width": 150,
+                          "originalId": "user",
+                          "id": "user",
+                          "alias": "user",
+                          "horizontalAlignment": "CENTER",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textColor": "#18181b",
+                          "textSize": "0.875rem",
+                          "fontStyle": "",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellEditable": false,
+                          "isEditable": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "user",
+                          "isSaveVisible": true,
+                          "isDiscardVisible": true,
+                          "computedValue": "{{table_of_tasks.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"user\"]))}}",
+                          "sticky": "",
+                          "validation": {},
+                          "cellBackground": "#F8FAFC"
                         }
                       },
                       "key": "8zd3g0k6b4",
@@ -429,7 +429,7 @@
                       "textSize": "0.875rem",
                       "widgetId": "kl031tmdyq",
                       "minWidth": 450,
-                      "tableData": "{{lists_of_tasks.data.map(p => ({\n         \n\t\tuser: p.assigned_to,\n\t\tdetails: p.details,\n\t\tstatus: (p.task_status === 1 ? 'completed':'incomplete'),\n\t\tdeadline: p.complete_by, \n\t\tname: p.title\n\t}))}}",
+                      "tableData": "{{lists_of_tasks.data.map(p => ({\n         \n\t\tuser: p.first_name,\n\t\tdetails: p.details,\n\t\tstatus: (p.task_status === 1 ? 'completed':'incomplete'),\n\t\tdeadline: p.complete_by, \n\t\tname: p.title\n\t}))}}",
                       "label": "Data",
                       "searchKey": "",
                       "parentId": "tlsmvmp680",
