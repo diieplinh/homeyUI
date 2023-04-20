@@ -2,12 +2,12 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "lists_of_tasks",
+    "name": "get_conversation",
     "datasource": {
       "name": "DEFAULT_REST_DATASOURCE",
       "pluginId": "restapi-plugin",
       "datasourceConfiguration": {
-        "url": "web:4000/tasks"
+        "url": "web:4000/messages/{{appsmith.store.curr_user}}/{{texts_to.selectedOptionValue}}"
       },
       "invalids": [],
       "messages": [],
@@ -16,7 +16,7 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "tasks",
+    "pageId": "Message",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
@@ -36,18 +36,21 @@
         "apiContentType": "none"
       }
     },
-    "executeOnLoad": true,
+    "executeOnLoad": false,
     "dynamicBindingPathList": [],
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [],
+    "jsonPathKeys": [
+      "appsmith.store.curr_user",
+      "texts_to.selectedOptionValue"
+    ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "tasks_lists_of_tasks",
+  "id": "Message_get_conversation",
   "deleted": false,
-  "gitSyncId": "6438ac1ba340c1324f694f34_643f3582f45b224b3ae3402c"
+  "gitSyncId": "6438ac1ba340c1324f694f34_6440ee788a46d31fef563c68"
 }

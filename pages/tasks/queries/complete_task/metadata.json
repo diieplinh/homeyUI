@@ -2,12 +2,12 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "Api1",
+    "name": "complete_task",
     "datasource": {
       "name": "DEFAULT_REST_DATASOURCE",
       "pluginId": "restapi-plugin",
       "datasourceConfiguration": {
-        "url": "web:4000/tasks/{{table_of_tasks.selectedRow.}}"
+        "url": "web:4000/tasks/{{table_of_tasks.selectedRow.id}}"
       },
       "invalids": [],
       "messages": [],
@@ -29,7 +29,7 @@
       ],
       "encodeParamsToggle": true,
       "queryParameters": [],
-      "body": "",
+      "body": "{\n\t\"title\": {{table_of_tasks.selectedRow.name}},\n\t\"details\": {{table_of_tasks.selectedRow.details}},\n\t\"task_status\": 1,\n\t\"assigned_to\": {{table_of_tasks.selectedRow.user_id}},\n\t\"complete_by\": {{moment(table_of_tasks.selectedRow.deadline).utc().format('YYYY-MM-DD HH:mm:ss')}},\n\t\"created_by\": {{table_of_tasks.selectedRow.creator}},\n\t\"category_id\": {{table_of_tasks.selectedRow.category}}\n\n\t\n\t\n}",
       "bodyFormData": [],
       "httpMethod": "PUT",
       "selfReferencingDataPaths": [],
@@ -45,6 +45,9 @@
     "executeOnLoad": false,
     "dynamicBindingPathList": [
       {
+        "key": "body"
+      },
+      {
         "key": "datasourceUrl"
       }
     ],
@@ -52,14 +55,20 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "table_of_tasks.selectedRow."
+      "moment(table_of_tasks.selectedRow.deadline).utc().format('YYYY-MM-DD HH:mm:ss')",
+      "table_of_tasks.selectedRow.category",
+      "table_of_tasks.selectedRow.creator",
+      "table_of_tasks.selectedRow.details",
+      "table_of_tasks.selectedRow.id",
+      "table_of_tasks.selectedRow.name",
+      "table_of_tasks.selectedRow.user_id"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "tasks_Api1",
+  "id": "tasks_complete_task",
   "deleted": false,
-  "gitSyncId": "643ef2c7d3663f1f721a8342_6440cf4e54729c7595e6934c"
+  "gitSyncId": "6438ac1ba340c1324f694f34_6440df588a46d31fef563c57"
 }
