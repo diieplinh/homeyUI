@@ -577,6 +577,7 @@
                       "label": "Data",
                       "searchKey": "",
                       "parentId": "tlsmvmp680",
+                      "serverSidePaginationEnabled": true,
                       "renderMode": "CANVAS",
                       "horizontalAlignment": "CENTER",
                       "isVisibleSearch": true,

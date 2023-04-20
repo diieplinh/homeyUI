@@ -529,6 +529,7 @@
                       "label": "Data",
                       "searchKey": "",
                       "parentId": "66tlj0qs9p",
+                      "serverSidePaginationEnabled": true,
                       "renderMode": "CANVAS",
                       "horizontalAlignment": "LEFT",
                       "isVisibleSearch": true,

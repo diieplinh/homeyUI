@@ -31,7 +31,7 @@
       "queryParameters": [],
       "body": "{\n\tcategory_name: {{shop_name.text}}\n\n}",
       "bodyFormData": [],
-      "httpMethod": "GET",
+      "httpMethod": "POST",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {

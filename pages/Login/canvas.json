@@ -123,7 +123,7 @@
                       "resetFormOnClick": true,
                       "boxShadow": "none",
                       "widgetName": "Button2",
-                      "onClick": "{{delete_user.run()}}",
+                      "onClick": "{{delete_user.run(() => user_functions.on_create_init(), () => {})}}",
                       "buttonColor": "#be185d",
                       "displayName": "Button",
                       "iconSVG": "/static/media/icon.cca026338f1c8eb6df8ba03d084c2fca.svg",
