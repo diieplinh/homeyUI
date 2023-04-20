@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 600,
+          "bottomRow": 570,
           "containerStyle": "none",
           "snapRows": 59,
           "parentRowSpace": 1,
@@ -35,15 +35,15 @@
               "searchTags": [
                 "group"
               ],
-              "topRow": 5,
-              "bottomRow": 60,
+              "topRow": 4,
+              "bottomRow": 57,
               "parentRowSpace": 10,
               "type": "FORM_WIDGET",
               "hideCard": false,
               "shouldScrollContents": true,
               "animateLoading": true,
               "parentColumnSpace": 12.5625,
-              "leftColumn": 1,
+              "leftColumn": 4,
               "dynamicBindingPathList": [
                 {
                   "key": "borderRadius"
@@ -57,7 +57,7 @@
                   "widgetName": "Canvas1",
                   "displayName": "Canvas",
                   "topRow": 0,
-                  "bottomRow": 550,
+                  "bottomRow": 530,
                   "parentRowSpace": 1,
                   "type": "CANVAS_WIDGET",
                   "canExtend": false,
@@ -131,8 +131,8 @@
                         "click",
                         "submit"
                       ],
-                      "topRow": 49,
-                      "bottomRow": 53,
+                      "topRow": 47,
+                      "bottomRow": 51,
                       "type": "BUTTON_WIDGET",
                       "hideCard": false,
                       "animateLoading": true,
@@ -141,7 +141,7 @@
                           "key": "onClick"
                         }
                       ],
-                      "leftColumn": 48,
+                      "leftColumn": 44,
                       "dynamicBindingPathList": [
                         {
                           "key": "borderRadius"
@@ -284,9 +284,13 @@
                       "columnWidthMap": {
                         "task": 131,
                         "step": 143,
-                        "status": 359,
+                        "status": 174.673828125,
                         "name": 240,
-                        "details": 183
+                        "details": 183,
+                        "id": 60,
+                        "user_id": 95,
+                        "creator": 117,
+                        "user": 111
                       },
                       "parentRowSpace": 10,
                       "hideCard": false,
@@ -791,7 +795,7 @@
                         }
                       ],
                       "labelPosition": "Top",
-                      "options": "{{task_categories.data.map( p => ({label: p.category_name, value: p.category_name}))}}",
+                      "options": "{{task_categories.data.map( p => ({label: p.category_name, value: p.category_id}))}}",
                       "placeholderText": "Select option",
                       "isDisabled": false,
                       "key": "w8w0sfdy6l",
@@ -876,7 +880,7 @@
                       "boxShadow": "none",
                       "widgetName": "comp",
                       "onClick": "{{complete_task.run(() => lists_of_tasks.run(), () => {})}}",
-                      "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+                      "buttonColor": "#f87171",
                       "displayName": "Button",
                       "iconSVG": "/static/media/icon.cca026338f1c8eb6df8ba03d084c2fca.svg",
                       "searchTags": [
@@ -899,9 +903,6 @@
                       "leftColumn": 44,
                       "dynamicBindingPathList": [
                         {
-                          "key": "buttonColor"
-                        },
-                        {
                           "key": "borderRadius"
                         }
                       ],
@@ -912,6 +913,56 @@
                       "rightColumn": 62,
                       "isDefaultClickDisabled": true,
                       "widgetId": "5qc8d83tt0",
+                      "minWidth": 120,
+                      "isVisible": true,
+                      "recaptchaType": "V3",
+                      "version": 1,
+                      "parentId": "tlsmvmp680",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "responsiveBehavior": "hug",
+                      "disabledWhenInvalid": false,
+                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                      "buttonVariant": "SECONDARY",
+                      "placement": "CENTER"
+                    },
+                    {
+                      "resetFormOnClick": false,
+                      "boxShadow": "none",
+                      "widgetName": "Button3",
+                      "onClick": "{{del_tasks.run(() => lists_of_tasks.run(), () => {})}}",
+                      "buttonColor": "#f87171",
+                      "displayName": "Button",
+                      "iconSVG": "/static/media/icon.cca026338f1c8eb6df8ba03d084c2fca.svg",
+                      "searchTags": [
+                        "click",
+                        "submit"
+                      ],
+                      "topRow": 47,
+                      "bottomRow": 51,
+                      "parentRowSpace": 10,
+                      "type": "BUTTON_WIDGET",
+                      "hideCard": false,
+                      "animateLoading": true,
+                      "parentColumnSpace": 11.9873046875,
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onClick"
+                        }
+                      ],
+                      "leftColumn": 0,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "borderRadius"
+                        }
+                      ],
+                      "text": "Delete Selected Task",
+                      "isDisabled": false,
+                      "key": "7j4y4kwvh8",
+                      "isDeprecated": false,
+                      "rightColumn": 16,
+                      "isDefaultClickDisabled": true,
+                      "widgetId": "4pvzicfopo",
                       "minWidth": 120,
                       "isVisible": true,
                       "recaptchaType": "V3",
@@ -947,7 +998,7 @@
               "key": "h1u110lqlk",
               "backgroundColor": "#FFFFFF",
               "isDeprecated": false,
-              "rightColumn": 56,
+              "rightColumn": 63,
               "dynamicHeight": "AUTO_HEIGHT",
               "widgetId": "bu6uo9ozzg",
               "minWidth": 450,
@@ -956,10 +1007,10 @@
               "renderMode": "CANVAS",
               "isLoading": false,
               "responsiveBehavior": "fill",
-              "originalTopRow": 5,
+              "originalTopRow": 4,
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
               "maxDynamicHeight": 9000,
-              "originalBottomRow": 60,
+              "originalBottomRow": 57,
               "minDynamicHeight": 10
             }
           ]

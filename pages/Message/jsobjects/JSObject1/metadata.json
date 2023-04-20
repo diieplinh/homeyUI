@@ -1,7 +1,7 @@
 {
   "unpublishedCollection": {
-    "name": "dropdown_execute",
-    "pageId": "Login",
+    "name": "JSObject1",
+    "pageId": "Message",
     "pluginId": "js-plugin",
     "pluginType": "JS",
     "actions": [],
@@ -9,7 +9,7 @@
     "variables": [],
     "userPermissions": []
   },
-  "id": "Login_dropdown_execute",
+  "id": "Message_JSObject1",
   "deleted": false,
-  "gitSyncId": "643ef2c7d3663f1f721a8342_6440be0454729c7595e69337"
+  "gitSyncId": "6438aed28580c21de225f694_6441067eb3d8644ec7ce0e2a"
 }

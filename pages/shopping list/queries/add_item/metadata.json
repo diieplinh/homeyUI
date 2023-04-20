@@ -2,12 +2,12 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "create_task",
+    "name": "add_item",
     "datasource": {
       "name": "DEFAULT_REST_DATASOURCE",
       "pluginId": "restapi-plugin",
       "datasourceConfiguration": {
-        "url": "web:4000/tasks"
+        "url": "web:4000/shoppingItems"
       },
       "invalids": [],
       "messages": [],
@@ -16,7 +16,7 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "tasks",
+    "pageId": "shopping list",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
@@ -29,7 +29,7 @@
       ],
       "encodeParamsToggle": true,
       "queryParameters": [],
-      "body": "{\n\t\"title\": {{t_type.text}},\n\t\"details\": {{deets_type.text}},\n\t\"task_status\": 0,\n\t\"assigned_to\": {{assignee.selectedOptionValue}},\n\t\"complete_by\": {{deadline.formattedDate}},\n\t\"created_by\": {{appsmith.store.curr_user}},\n\t\"category_id\": {{c_type.selectedOptionValue}}\n\t\n};",
+      "body": "{\n\t\"item_name\": {{name_details.text}},\n\t\"quantity\": {{quantity_details.text}},\n\t\"category_id\": {{category_details.selectedOptionValue}},\n\t\"assigned_to\": {{assignee_details.selectedOptionValue}},\n\t\"details\": {{detail_details.text}},\n\t\n};",
       "bodyFormData": [],
       "httpMethod": "POST",
       "selfReferencingDataPaths": [],
@@ -52,19 +52,18 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "appsmith.store.curr_user",
-      "assignee.selectedOptionValue",
-      "c_type.selectedOptionValue",
-      "deadline.formattedDate",
-      "deets_type.text",
-      "t_type.text"
+      "assignee_details.selectedOptionValue",
+      "category_details.selectedOptionValue",
+      "detail_details.text",
+      "name_details.text",
+      "quantity_details.text"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "tasks_create_task",
+  "id": "shopping list_add_item",
   "deleted": false,
-  "gitSyncId": "6438ac1ba340c1324f694f34_6440d2e78a46d31fef563c3f"
+  "gitSyncId": "6438aed28580c21de225f694_644115cab3d8644ec7ce0e4a"
 }

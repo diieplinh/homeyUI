@@ -1,0 +1,5 @@
+{
+	sender_id: {{appsmith.store.curr_user}},
+	recipient_id: {{texts_with.selectedOptionValue}},
+	content: {{text_box.inputText}}
+}

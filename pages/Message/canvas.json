@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 570,
+          "bottomRow": 700,
           "containerStyle": "none",
           "snapRows": 65,
           "parentRowSpace": 1,
@@ -36,7 +36,7 @@
                 "group"
               ],
               "topRow": 15,
-              "bottomRow": 57,
+              "bottomRow": 70,
               "parentRowSpace": 10,
               "type": "FORM_WIDGET",
               "hideCard": false,
@@ -57,7 +57,7 @@
                   "widgetName": "Canvas1",
                   "displayName": "Canvas",
                   "topRow": 0,
-                  "bottomRow": 420,
+                  "bottomRow": 550,
                   "parentRowSpace": 1,
                   "type": "CANVAS_WIDGET",
                   "canExtend": false,
@@ -120,9 +120,10 @@
                       "minDynamicHeight": 4
                     },
                     {
-                      "resetFormOnClick": true,
+                      "resetFormOnClick": false,
                       "boxShadow": "none",
                       "widgetName": "Button1",
+                      "onClick": "{{post_message.run(() => JSObject1.on_message_send(), () => showAlert('Error!','error'))}}",
                       "buttonColor": "#fca5a5",
                       "displayName": "Button",
                       "iconSVG": "/static/media/icon.cca026338f1c8eb6df8ba03d084c2fca.svg",
@@ -130,12 +131,16 @@
                         "click",
                         "submit"
                       ],
-                      "topRow": 36,
-                      "bottomRow": 40,
+                      "topRow": 49,
+                      "bottomRow": 53,
                       "type": "BUTTON_WIDGET",
                       "hideCard": false,
                       "animateLoading": true,
-                      "dynamicTriggerPathList": [],
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onClick"
+                        }
+                      ],
                       "leftColumn": 48,
                       "dynamicBindingPathList": [
                         {
@@ -157,37 +162,21 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "responsiveBehavior": "hug",
+                      "originalTopRow": 49,
                       "disabledWhenInvalid": true,
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                      "originalBottomRow": 53,
                       "buttonVariant": "PRIMARY",
                       "placement": "CENTER"
                     },
                     {
                       "boxShadow": "none",
-                      "widgetName": "Input1",
-                      "displayName": "Input",
                       "iconSVG": "/static/media/icon.9f505595da61a34f563dba82adeb06ec.svg",
                       "onSubmit": "",
-                      "searchTags": [
-                        "form",
-                        "text input",
-                        "number",
-                        "textarea"
-                      ],
-                      "topRow": 32,
-                      "bottomRow": 36,
-                      "parentRowSpace": 10,
+                      "topRow": 39,
                       "labelWidth": 5,
-                      "autoFocus": false,
                       "type": "INPUT_WIDGET_V2",
-                      "hideCard": false,
                       "animateLoading": true,
-                      "parentColumnSpace": 9.89453125,
-                      "dynamicTriggerPathList": [
-                        {
-                          "key": "onSubmit"
-                        }
-                      ],
                       "resetOnSubmit": true,
                       "leftColumn": 0,
                       "dynamicBindingPathList": [
@@ -198,39 +187,61 @@
                           "key": "borderRadius"
                         }
                       ],
-                      "labelPosition": "Top",
                       "labelStyle": "",
-                      "inputType": "TEXT",
+                      "inputType": "MULTI_LINE_TEXT",
                       "placeholderText": "",
                       "isDisabled": false,
-                      "key": "ml4xf2hj2w",
-                      "labelTextSize": "0.875rem",
                       "isRequired": false,
-                      "isDeprecated": false,
-                      "rightColumn": 64,
-                      "dynamicHeight": "FIXED",
-                      "widgetId": "l32f6pbw81",
+                      "dynamicHeight": "AUTO_HEIGHT_WITH_LIMITS",
                       "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                       "showStepArrows": false,
-                      "minWidth": 450,
                       "isVisible": true,
-                      "label": "",
                       "version": 2,
+                      "isLoading": false,
+                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                      "originalBottomRow": 49,
+                      "widgetName": "text_box",
+                      "displayName": "Input",
+                      "searchTags": [
+                        "form",
+                        "text input",
+                        "number",
+                        "textarea"
+                      ],
+                      "bottomRow": 49,
+                      "parentRowSpace": 10,
+                      "autoFocus": false,
+                      "hideCard": false,
+                      "shouldScrollContents": true,
+                      "parentColumnSpace": 9.89453125,
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onSubmit"
+                        }
+                      ],
+                      "labelPosition": "Top",
+                      "key": "ml4xf2hj2w",
+                      "labelTextSize": "0.875rem",
+                      "isDeprecated": false,
+                      "rightColumn": 64,
+                      "widgetId": "l32f6pbw81",
+                      "minWidth": 450,
+                      "label": "Message:",
                       "parentId": "tclplemdca",
                       "labelAlignment": "left",
                       "renderMode": "CANVAS",
-                      "isLoading": false,
                       "responsiveBehavior": "fill",
-                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-                      "maxDynamicHeight": 9000,
+                      "originalTopRow": 39,
+                      "maxDynamicHeight": 13,
                       "iconAlign": "left",
-                      "defaultText": "Type message here...",
-                      "minDynamicHeight": 4
+                      "defaultText": "",
+                      "minDynamicHeight": 9
                     },
                     {
                       "resetFormOnClick": false,
                       "boxShadow": "none",
                       "widgetName": "Button2",
+                      "onClick": "{{JSObject1.clear_textbox()}}",
                       "buttonColor": "#f87171",
                       "displayName": "Button",
                       "iconSVG": "/static/media/icon.cca026338f1c8eb6df8ba03d084c2fca.svg",
@@ -238,14 +249,18 @@
                         "click",
                         "submit"
                       ],
-                      "topRow": 36,
-                      "bottomRow": 40,
+                      "topRow": 49,
+                      "bottomRow": 53,
                       "parentRowSpace": 10,
                       "type": "BUTTON_WIDGET",
                       "hideCard": false,
                       "animateLoading": true,
                       "parentColumnSpace": 9.89453125,
-                      "dynamicTriggerPathList": [],
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onClick"
+                        }
+                      ],
                       "leftColumn": 0,
                       "dynamicBindingPathList": [
                         {
@@ -267,8 +282,10 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "responsiveBehavior": "hug",
+                      "originalTopRow": 49,
                       "disabledWhenInvalid": false,
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                      "originalBottomRow": 53,
                       "buttonVariant": "SECONDARY",
                       "placement": "CENTER"
                     },
@@ -294,6 +311,27 @@
                         },
                         {
                           "key": "cellBackground"
+                        },
+                        {
+                          "key": "tableData"
+                        },
+                        {
+                          "key": "primaryColumns.sender_id.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.recipient_id.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.content.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.sent_at.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.message_id.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.sent_by.computedValue"
                         }
                       ],
                       "needsHeightForContent": true,
@@ -333,30 +371,210 @@
                         }
                       },
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-                      "columnUpdatedAt": 1681979852999,
+                      "columnUpdatedAt": 1681985813531,
                       "defaultSelectedRowIndices": [
                         0
                       ],
                       "widgetName": "Table1",
                       "defaultPageSize": 0,
                       "columnOrder": [
-                        "status",
-                        "user"
+                        "sent_by",
+                        "sender_id",
+                        "recipient_id",
+                        "content",
+                        "sent_at",
+                        "message_id"
                       ],
                       "dynamicPropertyPathList": [],
                       "displayName": "Table",
-                      "bottomRow": 24,
+                      "bottomRow": 32,
                       "columnWidthMap": {
                         "task": 88,
                         "step": 143,
-                        "status": 359
+                        "status": 359,
+                        "content": 321
                       },
                       "parentRowSpace": 10,
                       "hideCard": false,
                       "parentColumnSpace": 12.5625,
                       "dynamicTriggerPathList": [],
                       "borderWidth": "1",
-                      "primaryColumns": {},
+                      "primaryColumns": {
+                        "sender_id": {
+                          "allowCellWrapping": false,
+                          "index": 0,
+                          "width": 150,
+                          "originalId": "sender_id",
+                          "id": "sender_id",
+                          "alias": "sender_id",
+                          "horizontalAlignment": "CENTER",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "number",
+                          "textColor": "#18181b",
+                          "textSize": "0.875rem",
+                          "fontStyle": "",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": false,
+                          "isDisabled": false,
+                          "isCellEditable": false,
+                          "isEditable": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "sender_id",
+                          "isSaveVisible": true,
+                          "isDiscardVisible": true,
+                          "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"sender_id\"]))}}",
+                          "sticky": "",
+                          "validation": {},
+                          "cellBackground": "#F8FAFC"
+                        },
+                        "recipient_id": {
+                          "allowCellWrapping": false,
+                          "index": 1,
+                          "width": 150,
+                          "originalId": "recipient_id",
+                          "id": "recipient_id",
+                          "alias": "recipient_id",
+                          "horizontalAlignment": "CENTER",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "number",
+                          "textColor": "#18181b",
+                          "textSize": "0.875rem",
+                          "fontStyle": "",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": false,
+                          "isDisabled": false,
+                          "isCellEditable": false,
+                          "isEditable": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "recipient_id",
+                          "isSaveVisible": true,
+                          "isDiscardVisible": true,
+                          "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"recipient_id\"]))}}",
+                          "sticky": "",
+                          "validation": {},
+                          "cellBackground": "#F8FAFC"
+                        },
+                        "content": {
+                          "allowCellWrapping": false,
+                          "index": 2,
+                          "width": 150,
+                          "originalId": "content",
+                          "id": "content",
+                          "alias": "content",
+                          "horizontalAlignment": "CENTER",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textColor": "#18181b",
+                          "textSize": "0.875rem",
+                          "fontStyle": "",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellEditable": false,
+                          "isEditable": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "content",
+                          "isSaveVisible": true,
+                          "isDiscardVisible": true,
+                          "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"content\"]))}}",
+                          "sticky": "",
+                          "validation": {},
+                          "cellBackground": "#F8FAFC"
+                        },
+                        "sent_at": {
+                          "allowCellWrapping": false,
+                          "index": 3,
+                          "width": 150,
+                          "originalId": "sent_at",
+                          "id": "sent_at",
+                          "alias": "sent_at",
+                          "horizontalAlignment": "CENTER",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textColor": "#18181b",
+                          "textSize": "0.875rem",
+                          "fontStyle": "",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellEditable": false,
+                          "isEditable": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "sent_at",
+                          "isSaveVisible": true,
+                          "isDiscardVisible": true,
+                          "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"sent_at\"]))}}",
+                          "sticky": "",
+                          "validation": {},
+                          "cellBackground": "#F8FAFC"
+                        },
+                        "message_id": {
+                          "allowCellWrapping": false,
+                          "index": 4,
+                          "width": 150,
+                          "originalId": "message_id",
+                          "id": "message_id",
+                          "alias": "message_id",
+                          "horizontalAlignment": "CENTER",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "number",
+                          "textColor": "#18181b",
+                          "textSize": "0.875rem",
+                          "fontStyle": "",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": false,
+                          "isDisabled": false,
+                          "isCellEditable": false,
+                          "isEditable": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "message_id",
+                          "isSaveVisible": true,
+                          "isDiscardVisible": true,
+                          "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"message_id\"]))}}",
+                          "sticky": "",
+                          "validation": {},
+                          "cellBackground": "#F8FAFC"
+                        },
+                        "sent_by": {
+                          "allowCellWrapping": false,
+                          "index": 1,
+                          "width": 150,
+                          "originalId": "sent_by",
+                          "id": "sent_by",
+                          "alias": "sent_by",
+                          "horizontalAlignment": "CENTER",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textColor": "#18181b",
+                          "textSize": "0.875rem",
+                          "fontStyle": "",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellEditable": false,
+                          "isEditable": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "sent_by",
+                          "isSaveVisible": true,
+                          "isDiscardVisible": true,
+                          "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"sent_by\"]))}}",
+                          "sticky": "",
+                          "validation": {},
+                          "cellBackground": "#F8FAFC"
+                        }
+                      },
                       "key": "8zd3g0k6b4",
                       "canFreezeColumn": true,
                       "isDeprecated": false,
@@ -364,10 +582,11 @@
                       "textSize": "0.875rem",
                       "widgetId": "f4wb4ni4gm",
                       "minWidth": 450,
-                      "tableData": "\n ",
+                      "tableData": "{{get_conversation.data.map(p => (\n{\n\tsender_id: p.sender_id,\n\tsent_by: p.first_name + \" \" + p.last_name,\n\trecipient_id: p.recipient_id,\n\tcontent: p.content,\n\tsent_at: p.sent_at,\n\tmessage_id: p.message_id\n}\n)) }}\n ",
                       "label": "Data",
                       "searchKey": "",
                       "parentId": "tclplemdca",
+                      "serverSidePaginationEnabled": true,
                       "renderMode": "CANVAS",
                       "horizontalAlignment": "CENTER",
                       "isVisibleSearch": true,
@@ -378,21 +597,17 @@
                     },
                     {
                       "boxShadow": "none",
-                      "widgetName": "texts_to",
+                      "widgetName": "texts_with",
                       "isFilterable": true,
-                      "dynamicPropertyPathList": [
-                        {
-                          "key": "onOptionChange"
-                        }
-                      ],
+                      "dynamicPropertyPathList": [],
                       "displayName": "Select",
                       "iconSVG": "/static/media/icon.bd99caba5853ad71e4b3d8daffacb3a2.svg",
                       "labelText": "Texts with:",
                       "searchTags": [
                         "dropdown"
                       ],
-                      "topRow": 25,
-                      "bottomRow": 32,
+                      "topRow": 32,
+                      "bottomRow": 39,
                       "parentRowSpace": 10,
                       "labelWidth": 5,
                       "type": "SELECT_WIDGET",
@@ -419,7 +634,7 @@
                         }
                       ],
                       "labelPosition": "Top",
-                      "options": "{{get_users.data.map( p => ({label: p.first_name + \" \" + p.last_name, value: p.user_id}))}}",
+                      "options": "{{get_users.data.map( p => (\n\t{\n\t\tlabel: p.first_name + \" \" + p.last_name, \n\t\tvalue: p.user_id\n\t}\n))}}",
                       "placeholderText": "Select option",
                       "isDisabled": false,
                       "key": "7avwxsozjc",
@@ -440,7 +655,7 @@
                       "responsiveBehavior": "fill",
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                       "maxDynamicHeight": 9000,
-                      "onOptionChange": "{{get_users.run()}}",
+                      "onOptionChange": "{{JSObject1.update_state()}}",
                       "minDynamicHeight": 4
                     }
                   ],
@@ -477,13 +692,24 @@
               "originalTopRow": 15,
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
               "maxDynamicHeight": 9000,
-              "originalBottomRow": 57,
+              "originalBottomRow": 64,
               "minDynamicHeight": 10
             }
           ]
         },
         "layoutOnLoadActions": [
           [
+            {
+              "id": "Message_get_conversation",
+              "name": "get_conversation",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "appsmith.store.curr_user",
+                "texts_with.selectedOptionValue"
+              ],
+              "timeoutInMillisecond": 10000
+            },
             {
               "id": "Message_get_users",
               "name": "get_users",

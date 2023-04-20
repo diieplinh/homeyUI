@@ -4,9 +4,7 @@
 	"task_status": 0,
 	"assigned_to": {{assignee.selectedOptionValue}},
 	"complete_by": {{deadline.formattedDate}},
-	"created_by": {{appsmith.store.curr_user}}
-
-	
-	
+	"created_by": {{appsmith.store.curr_user}},
+	"category_id": {{c_type.selectedOptionValue}}
 	
 };

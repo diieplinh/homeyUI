@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "myFun1",
-    "fullyQualifiedName": "dropdown_execute.myFun1",
+    "name": "on_message_send",
+    "fullyQualifiedName": "JSObject1.on_message_send",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -13,8 +13,8 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Login",
-    "collectionId": "Login_dropdown_execute",
+    "pageId": "Message",
+    "collectionId": "Message_JSObject1",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
@@ -24,7 +24,6 @@
       "isAsync": true
     },
     "executeOnLoad": false,
-    "clientSideExecution": true,
     "dynamicBindingPathList": [
       {
         "key": "body"
@@ -38,7 +37,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "Login_dropdown_execute.myFun1",
+  "id": "Message_JSObject1.on_message_send",
   "deleted": false,
-  "gitSyncId": "643ef2c7d3663f1f721a8342_6440be0454729c7595e69333"
+  "gitSyncId": "6438aed28580c21de225f694_64410c03b3d8644ec7ce0e36"
 }

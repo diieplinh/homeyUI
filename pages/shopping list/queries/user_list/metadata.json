@@ -2,12 +2,12 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "lists_of_tasks",
+    "name": "user_list",
     "datasource": {
       "name": "DEFAULT_REST_DATASOURCE",
       "pluginId": "restapi-plugin",
       "datasourceConfiguration": {
-        "url": "web:4000/tasks"
+        "url": "web:4000/users"
       },
       "invalids": [],
       "messages": [],
@@ -16,7 +16,7 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "tasks",
+    "pageId": "shopping list",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
@@ -47,7 +47,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "tasks_lists_of_tasks",
+  "id": "shopping list_user_list",
   "deleted": false,
-  "gitSyncId": "6438ac1ba340c1324f694f34_643f3582f45b224b3ae3402c"
+  "gitSyncId": "6438aed28580c21de225f694_64411c2eb3d8644ec7ce0e53"
 }
