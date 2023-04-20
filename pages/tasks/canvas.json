@@ -203,9 +203,6 @@
                           "key": "primaryColumns.name.computedValue"
                         },
                         {
-                          "key": "primaryColumns.customColumn1.cellBackground"
-                        },
-                        {
                           "key": "tableData"
                         },
                         {
@@ -249,19 +246,18 @@
                         }
                       },
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-                      "columnUpdatedAt": 1681868800453,
+                      "columnUpdatedAt": 1681869345244,
                       "originalBottomRow": 70,
                       "defaultSelectedRowIndices": [
                         0
                       ],
-                      "widgetName": "Table1",
+                      "widgetName": "table_of_tasks",
                       "defaultPageSize": 0,
                       "columnOrder": [
                         "details",
                         "user",
                         "deadline",
                         "name",
-                        "customColumn1",
                         "status"
                       ],
                       "dynamicPropertyPathList": [],
@@ -270,7 +266,9 @@
                       "columnWidthMap": {
                         "task": 131,
                         "step": 143,
-                        "status": 359
+                        "status": 359,
+                        "name": 172,
+                        "details": 183
                       },
                       "parentRowSpace": 10,
                       "hideCard": false,
@@ -302,7 +300,7 @@
                           "label": "details",
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
-                          "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"details\"]))}}",
+                          "computedValue": "{{table_of_tasks.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"details\"]))}}",
                           "sticky": "",
                           "validation": {},
                           "cellBackground": "#F8FAFC"
@@ -331,7 +329,7 @@
                           "label": "user",
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
-                          "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"user\"]))}}",
+                          "computedValue": "{{table_of_tasks.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"user\"]))}}",
                           "sticky": "",
                           "validation": {},
                           "cellBackground": "#F8FAFC"
@@ -360,7 +358,7 @@
                           "label": "deadline",
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
-                          "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"deadline\"]))}}",
+                          "computedValue": "{{table_of_tasks.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"deadline\"]))}}",
                           "sticky": "",
                           "validation": {},
                           "cellBackground": "#F8FAFC"
@@ -389,40 +387,10 @@
                           "label": "name: ",
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
-                          "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"name\"]))}}",
+                          "computedValue": "{{table_of_tasks.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"name\"]))}}",
                           "sticky": "",
                           "validation": {},
                           "cellBackground": "#F8FAFC"
-                        },
-                        "customColumn1": {
-                          "allowCellWrapping": false,
-                          "index": 5,
-                          "width": 150,
-                          "originalId": "customColumn1",
-                          "id": "customColumn1",
-                          "alias": "customColumn1",
-                          "horizontalAlignment": "CENTER",
-                          "verticalAlignment": "CENTER",
-                          "columnType": "text",
-                          "textColor": "#18181b",
-                          "textSize": "0.875rem",
-                          "enableFilter": true,
-                          "enableSort": true,
-                          "isVisible": true,
-                          "isDisabled": false,
-                          "isCellEditable": false,
-                          "isEditable": false,
-                          "isCellVisible": true,
-                          "isDerived": true,
-                          "label": "customColumn1",
-                          "isSaveVisible": true,
-                          "isDiscardVisible": true,
-                          "computedValue": "",
-                          "sticky": "",
-                          "validation": {},
-                          "buttonStyle": "rgb(3, 179, 101)",
-                          "cellBackground": "{{appsmith.theme.colors.backgroundColor}}",
-                          "labelColor": "#FFFFFF"
                         },
                         "status": {
                           "allowCellWrapping": false,
@@ -448,7 +416,7 @@
                           "label": "status",
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
-                          "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"status\"]))}}",
+                          "computedValue": "{{table_of_tasks.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"status\"]))}}",
                           "sticky": "",
                           "validation": {},
                           "cellBackground": "#F8FAFC"
@@ -678,10 +646,13 @@
                         },
                         {
                           "key": "borderRadius"
+                        },
+                        {
+                          "key": "options"
                         }
                       ],
                       "labelPosition": "Top",
-                      "options": "[\n  {\n    \"label\": \"Cleaning\",\n    \"value\": \"CLEANING\"\n  },\n  {\n    \"label\": \"Weekly Chores\",\n    \"value\": \"WEEKLY\"\n  },\n  {\n    \"label\": \"Daily Chores\",\n    \"value\": \"DAILY\"\n  }\n]",
+                      "options": "{{task_categories.data.map( p => ({label: p.category_name, value: p.category_name}))}}",
                       "placeholderText": "Select option",
                       "isDisabled": false,
                       "key": "w8w0sfdy6l",
@@ -732,10 +703,13 @@
                         },
                         {
                           "key": "borderRadius"
+                        },
+                        {
+                          "key": "options"
                         }
                       ],
                       "labelPosition": "Top",
-                      "options": "[\n  {\n    \"label\": \"Codey\",\n    \"value\": \"CODEY\"\n  },\n  {\n    \"label\": \"Emma\",\n    \"value\": \"emma\"\n  },\n  {\n    \"label\": \"Amanda\",\n    \"value\": \"AMANDA\"\n  }\n]",
+                      "options": "{{list_of_users.data.map( p => ({label: p.first_name + \" \" + p.last_name, value: p.user_id}))}}",
                       "placeholderText": "Select option",
                       "isDisabled": false,
                       "key": "w8w0sfdy6l",
@@ -800,8 +774,24 @@
         "layoutOnLoadActions": [
           [
             {
+              "id": "tasks_list_of_users",
+              "name": "list_of_users",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            },
+            {
               "id": "tasks_lists_of_tasks",
               "name": "lists_of_tasks",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "tasks_task_categories",
+              "name": "task_categories",
               "confirmBeforeExecute": false,
               "pluginType": "API",
               "jsonPathKeys": [],
