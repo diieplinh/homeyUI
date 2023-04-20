@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 560,
+          "bottomRow": 520,
           "containerStyle": "none",
           "snapRows": 59,
           "parentRowSpace": 1,
@@ -36,13 +36,14 @@
                 "group"
               ],
               "topRow": 5,
-              "bottomRow": 56,
+              "bottomRow": 52,
               "parentRowSpace": 10,
               "type": "FORM_WIDGET",
               "hideCard": false,
               "shouldScrollContents": true,
               "animateLoading": true,
               "parentColumnSpace": 12.5625,
+              "dynamicTriggerPathList": [],
               "leftColumn": 1,
               "dynamicBindingPathList": [
                 {
@@ -57,7 +58,7 @@
                   "widgetName": "Canvas1",
                   "displayName": "Canvas",
                   "topRow": 0,
-                  "bottomRow": 510,
+                  "bottomRow": 470,
                   "parentRowSpace": 1,
                   "type": "CANVAS_WIDGET",
                   "canExtend": false,
@@ -124,15 +125,15 @@
                       "boxShadow": "none",
                       "widgetName": "Button2",
                       "onClick": "{{create_event.run(() => lists_of_events.run(), () => {})}}",
-                      "buttonColor": "#ec4899",
+                      "buttonColor": "#fecaca",
                       "displayName": "Button",
                       "iconSVG": "/static/media/icon.cca026338f1c8eb6df8ba03d084c2fca.svg",
                       "searchTags": [
                         "click",
                         "submit"
                       ],
-                      "topRow": 45,
-                      "bottomRow": 49,
+                      "topRow": 39,
+                      "bottomRow": 45,
                       "type": "BUTTON_WIDGET",
                       "hideCard": false,
                       "animateLoading": true,
@@ -141,7 +142,7 @@
                           "key": "onClick"
                         }
                       ],
-                      "leftColumn": 49,
+                      "leftColumn": 43,
                       "dynamicBindingPathList": [
                         {
                           "key": "borderRadius"
@@ -166,12 +167,12 @@
                       "disabledWhenInvalid": false,
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                       "originalBottomRow": 54,
-                      "buttonVariant": "SECONDARY",
+                      "buttonVariant": "PRIMARY",
                       "placement": "CENTER"
                     },
                     {
                       "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
-                      "borderColor": "#E0DEDE",
+                      "borderColor": "#fecaca",
                       "isVisibleDownload": true,
                       "iconSVG": "/static/media/icon.db8a9cbd2acd22a31ea91cc37ea2a46c.svg",
                       "topRow": 6,
@@ -461,7 +462,7 @@
                       "parentColumnSpace": 10.4833984375,
                       "dynamicTriggerPathList": [],
                       "resetOnSubmit": true,
-                      "leftColumn": 0,
+                      "leftColumn": 1,
                       "dynamicBindingPathList": [
                         {
                           "key": "accentColor"
@@ -635,7 +636,7 @@
               "borderWidth": "1",
               "positioning": "fixed",
               "key": "h1u110lqlk",
-              "backgroundColor": "#FFFFFF",
+              "backgroundColor": "#fef2f2",
               "isDeprecated": false,
               "rightColumn": 63,
               "dynamicHeight": "AUTO_HEIGHT",
@@ -649,7 +650,7 @@
               "originalTopRow": 5,
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
               "maxDynamicHeight": 9000,
-              "originalBottomRow": 56,
+              "originalBottomRow": 52,
               "minDynamicHeight": 10
             }
           ]

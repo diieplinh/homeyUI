@@ -43,6 +43,7 @@
               "shouldScrollContents": true,
               "animateLoading": true,
               "parentColumnSpace": 12.5625,
+              "dynamicTriggerPathList": [],
               "leftColumn": 3,
               "dynamicBindingPathList": [
                 {
@@ -84,7 +85,7 @@
                       "overflow": "NONE",
                       "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
                       "dynamicTriggerPathList": [],
-                      "leftColumn": 1,
+                      "leftColumn": 26,
                       "dynamicBindingPathList": [
                         {
                           "key": "truncateButtonColor"
@@ -98,10 +99,10 @@
                       ],
                       "shouldTruncate": false,
                       "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
-                      "text": "Messages",
+                      "text": "Conversations",
                       "key": "y9m2vw5kx1",
                       "isDeprecated": false,
-                      "rightColumn": 24,
+                      "rightColumn": 49,
                       "textAlign": "LEFT",
                       "dynamicHeight": "AUTO_HEIGHT",
                       "widgetId": "ui0oz0ucdi",
@@ -371,7 +372,7 @@
                         }
                       },
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-                      "columnUpdatedAt": 1681985813531,
+                      "columnUpdatedAt": 1681997025709,
                       "defaultSelectedRowIndices": [
                         0
                       ],
@@ -508,7 +509,7 @@
                           "isEditable": false,
                           "isCellVisible": true,
                           "isDerived": false,
-                          "label": "sent_at",
+                          "label": "sent at",
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
                           "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"sent_at\"]))}}",
@@ -566,7 +567,7 @@
                           "isEditable": false,
                           "isCellVisible": true,
                           "isDerived": false,
-                          "label": "sent_by",
+                          "label": "from",
                           "isSaveVisible": true,
                           "isDiscardVisible": true,
                           "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"sent_by\"]))}}",
@@ -678,7 +679,7 @@
               "borderWidth": "1",
               "positioning": "fixed",
               "key": "xmcwb4nu5k",
-              "backgroundColor": "#FFFFFF",
+              "backgroundColor": "#fef2f2",
               "isDeprecated": false,
               "rightColumn": 59,
               "dynamicHeight": "AUTO_HEIGHT",
@@ -692,7 +693,7 @@
               "originalTopRow": 15,
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
               "maxDynamicHeight": 9000,
-              "originalBottomRow": 64,
+              "originalBottomRow": 70,
               "minDynamicHeight": 10
             }
           ]
